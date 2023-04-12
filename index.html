@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="Arrays-Assignment.js"></script>
 </head>
 
 <body>
@@ -42,41 +43,50 @@
     </main>
     <script>
         //Exercise 1 - create an array of your 6 favorite things
-        
+        animals = ["dog", "cat", "rabbit", "horse", "pig", "cow"]
 
         //Exercise 2 - show your most favorite thing on the page
         let myFavorite = document.getElementById('my-favorite');//selects the tag
-        myFavorite.innerHTML;//adds content inside the tag
+        myFavorite.innerHTML = `<li>${animals[3]}</li>`;//adds content inside the tag
 
+        
         //Exercise 3 - change your favorite thing and show it on the page
         
-        myFavorite.innerHTML;
+        myFavorite.innerHTML = `<li>${animals[1]}</li>`;
+        // Note: `<li>${array[]}</li>`
 
         //Exercise 4 - Use the length property to show the number of items in your array
         let total = document.getElementById('total');
         
-        total.innerHTML;
+        total.innerHTML = `<li>${animals.length}</li>`;
 
         //Exercise 5 - iterate through the array and show it on the page using the forEach() method.
         let myList = document.getElementById('all-favorites');
-        
 
-        myList.innerHTML;
+        // This part of the lesson is inconsistent with the slides
+        // I opted to follow the way the slides went, but if we were supposed to use forEach()
+        // I blame the slides :thumbsup:
+        
+        function displayArray(array){
+            return array;
+        }
+        myList.innerHTML = `<li>${displayArray(animals)}</li>`;
 
         //Exercise 6 Concatenation of arrays
         let more = document.getElementById('more-favorites');
-
-        more.innerHTML;
+        moreAnimals = ["deer","bear","moose"];
+        more.innerHTML = `<li>${animals.concat(moreAnimals)}</li>`;
 
         //Exercise 7 push a new item to your array
         let pushed = document.getElementById('favorites-plus-one');
-
-        pushed.innerHTML;
+        animals.push("fox")
+        pushed.innerHTML = `<li>${animals}</li>`;
 
        //Exercise 8 push a new item to your array
        
         let popped = document.getElementById('favorites-minus-one');
-        popped.innerHTML;
+        animals.pop()
+        popped.innerHTML = `<li>${animals}</li>`;
 
         //Exercises 9-12, practice slice(), shift(), unshift() in arrays.js
     </script>
