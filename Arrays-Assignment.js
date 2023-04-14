@@ -13,6 +13,9 @@ animals.forEach(element => console.log(element));
    for (let i = 0; i < animals.length; i++){
       if (animals[i] === "fox"){
          // return true;
+
+         // commented out because I'm using the live server's console to confirm answers
+         // installing node on my computer is scuffed, havent figured it out
       }
    }
 
