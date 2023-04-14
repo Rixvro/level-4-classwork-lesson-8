@@ -82,6 +82,20 @@
         popped.innerHTML = `<li>${animals}</li>`;
 
         //Exercises 9-12, practice slice(), shift(), unshift() in arrays.js
+
+        // Nested Array Practice:
+        let nestArray = [
+            ["birds", "crows", "pidgeons"],
+            ["pigs", "cows", "chickens"],
+            ["dogs", "cats", "rabbits"]
+        ]
+
+        for (let arrays of nestArray){
+            for (let item of arrays){
+                console.log(item);
+            }
+        }
+        
     </script>
 
 </body>
