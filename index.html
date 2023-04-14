@@ -90,12 +90,22 @@
             ["dogs", "cats", "rabbits"]
         ]
 
+        // Using powerpoint method using for of
+
         for (let arrays of nestArray){
             for (let item of arrays){
                 console.log(item);
             }
         }
-        
+
+        // Using normal for loops
+
+        for (let arrays = 0; arrays < nestArray.length; arrays++){
+            for (let items = 0; items < nestArray[arrays].length; items++){
+                console.log(nestArray[arrays][items]);
+            }
+        }
+
     </script>
 
 </body>
