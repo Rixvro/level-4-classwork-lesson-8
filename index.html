@@ -63,14 +63,7 @@
         //Exercise 5 - iterate through the array and show it on the page using the forEach() method.
         let myList = document.getElementById('all-favorites');
 
-        // This part of the lesson is inconsistent with the slides
-        // I opted to follow the way the slides went, but if we were supposed to use forEach()
-        // I blame the slides :thumbsup:
-        
-        function displayArray(array){
-            return array;
-        }
-        myList.innerHTML = `<li>${displayArray(animals)}</li>`;
+        animals.forEach(element => myList.innerHTML += `<li>${element}</li>`);
 
         //Exercise 6 Concatenation of arrays
         let more = document.getElementById('more-favorites');
