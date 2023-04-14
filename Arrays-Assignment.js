@@ -9,15 +9,18 @@ animals.forEach(element => console.log(element));
 //5 create a function that takes in a string and in the function iterate over each element in the array and for each element check if its equal to the parameter
   // if it is then return that string
   //else continue
-
+function check(item){
    for (let i = 0; i < animals.length; i++){
-      if (animals[i] === "fox"){
-         // return true;
-
-         // commented out because I'm using the live server's console to confirm answers
-         // installing node on my computer is scuffed, havent figured it out
+      if (animals[i] === item){
+         console.log("true")
+         return true;
       }
    }
+   console.log("false")
+   return false;
+}
+check("fox");
+check("goose");
 
  //6 remove the last element from the array and then console.log the array
 
